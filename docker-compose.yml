@@ -1,0 +1,16 @@
+version: '3.8'  # Specify the version of the Compose file format
+
+services:
+  dev-db:
+    image: postgres:13
+    ports:
+      - "5433:5432"  # Use quotes for clarity
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: rudra1258
+      POSTGRES_DB: nest
+    networks:
+      - rudraPramanik
+
+networks:
+  rudraPramanik:
